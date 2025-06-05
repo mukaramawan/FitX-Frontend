@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './layout/Layout'
 import Home from './pages/Home'
-import ExerciseLibrary from './pages/ExerciseLibrary'
+import ExerciseLibrary from './pages/Exercise Library/ExerciseLibrary'
 import WorkoutWithAr from './pages/WorkoutWithAr'
 import Analytics from './pages/Analytics'
 import Profile from './pages/Profile'

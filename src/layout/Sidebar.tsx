@@ -31,7 +31,7 @@ function Sidebar() {
       {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-screen w-[70%] sm:w-[50%] md:w-[13%] bg-gray-950 p-4 flex flex-col z-40 transition-transform duration-300 ease-in-out
-          ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:static md:h-auto md:flex md:flex-col justify-between`}
+          ${isOpen ? "translate-x-0" : "-translate-x-50"} md:translate-x-0 md:static md:h-auto md:flex md:flex-col justify-between`}
       >
         <div>
           <div className="mb-8 text-center">
