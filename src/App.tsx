@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import ExerciseLibrary from './pages/Exercise Library/ExerciseLibrary'
 import WorkoutWithAr from './pages/WorkoutWithAr'
 import Analytics from './pages/Analytics'
-import Profile from './pages/Profile'
+import Profile from './pages/Profile/Profile'
 import WorkoutWithAI from './pages/WorkoutWithAI'
 
 function App() {
