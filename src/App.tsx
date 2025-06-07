@@ -3,7 +3,7 @@ import Layout from './layout/Layout'
 import Home from './pages/Home'
 import ExerciseLibrary from './pages/Exercise Library/ExerciseLibrary'
 import WorkoutWithAr from './pages/WorkoutWithAr'
-import Analytics from './pages/Analytics'
+import Analytics from './pages/Analytics/Analytics'
 import Profile from './pages/Profile/Profile'
 import WorkoutWithAI from './pages/WorkoutWithAI'
 
