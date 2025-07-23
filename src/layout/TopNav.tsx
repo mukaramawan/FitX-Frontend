@@ -1,4 +1,6 @@
 import { Bell, MoreVertical, X } from 'lucide-react'
+import NotificationDropdown from '../components/NotificationDropdown'
+import UserDropdown from '../components/UserDropdown'
 
 interface TopNavProps {
   isOpen: boolean
@@ -34,32 +36,14 @@ function TopNav({ isOpen, setIsOpen }: TopNavProps) {
       </div>
 
       <div className="flex items-center gap-4 md:gap-6">
-        <div className="relative cursor-pointer">
-          <Bell className="w-5 h-5 md:w-6 md:h-6 text-gray-400 hover:text-white transition-colors" />
-          <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-            3
-          </span>
-        </div>
-
-        <div className="flex items-center gap-2 cursor-pointer group">
-          <img
-            src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
-            alt="Profile"
-            className="w-7 h-7 md:w-8 md:h-8 rounded-full object-cover"
-          />
-          <svg
-            className="w-4 h-4 md:w-5 md:h-5 text-gray-400 group-hover:text-white transition-colors"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </div>
+        <NotificationDropdown />
+        <UserDropdown 
+          userName="Mukaram"
+          userEmail="mukaram@example.com"
+          userImage="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
+        />
       </div>
+
     </div>
   )
 }
