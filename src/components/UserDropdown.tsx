@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { User, Settings, HelpCircle, LogOut, Edit2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext.tsx';
 
 interface UserDropdownProps {
   userName: string;
@@ -11,8 +12,16 @@ interface UserDropdownProps {
 const UserDropdown: React.FC<UserDropdownProps> = ({ userName, userEmail, userImage }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const { signOut } = UserAuth();
 
-
+  const handleSignOut = async () => {
+    try {
+      await signOut();
+      navigate('/signin');
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  };
 
   const menuItems = [
     { 
@@ -99,6 +108,7 @@ const UserDropdown: React.FC<UserDropdownProps> = ({ userName, userEmail, userIm
           {/* Sign Out Button */}
           <div className="p-2 border-t border-gray-700/50">
             <button
+              onClick={handleSignOut}
               className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm text-red-400 hover:bg-red-500/10 hover:text-red-300 rounded-lg transition-colors"
             >
               <LogOut className="w-4 h-4" />
